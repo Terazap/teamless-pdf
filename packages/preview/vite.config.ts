@@ -19,7 +19,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '/pdfs': path.resolve(process.cwd(), 'pdfs'),
-      '@teamless/react': path.resolve(__dirname, '../react/src'),
     },
   },
 });
