@@ -1,5 +1,17 @@
+'use client';
+
 import React from 'react';
-import Playground from './components/Playground';
+import dynamic from 'next/dynamic';
+
+const Playground = dynamic(() => import('./components/Playground'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full bg-slate-900/50 border border-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center h-[600px] text-slate-500 gap-3">
+      <div className="h-6 w-6 animate-spin border-2 border-indigo-500 border-t-transparent rounded-full" />
+      <span className="text-sm">Loading Interactive Playground...</span>
+    </div>
+  )
+});
 import { 
   Terminal, 
   Layers, 
