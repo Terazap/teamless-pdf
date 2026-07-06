@@ -1,0 +1,15 @@
+{
+  "name": "teamless-pdf-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "teamless dev"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^4.2.1",
+    "@teamless/preview": "^1.0.0",
+    "@teamless/react": "^1.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

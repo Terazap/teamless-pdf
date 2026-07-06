@@ -1,0 +1,45 @@
+{
+  "name": "@teamless/react",
+  "version": "1.0.0",
+  "description": "Core react library for Teamless: React + Tailwind v4 PDF generation",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./templates": {
+      "types": "./dist/templates/index.d.ts",
+      "import": "./dist/templates/index.mjs",
+      "require": "./dist/templates/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.tsx src/templates/index.ts --dts --format cjs,esm",
+    "dev": "tsup src/index.tsx src/templates/index.ts --watch --dts --format cjs,esm",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "react-pdf-tailwind": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@react-pdf/renderer": ">=4.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@react-pdf/renderer": "^4.2.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  }
+}
